@@ -10,6 +10,16 @@ on:
   workflow_dispatch:
 
 jobs:
+
+  configura-dotenet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Usando .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.
+
   build-workflow:
     runs-on: ubuntu-latest
     steps:

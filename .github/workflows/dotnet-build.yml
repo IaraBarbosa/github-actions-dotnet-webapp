@@ -18,20 +18,20 @@ jobs:
       - name: Usando .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 8.
+          dotnet-version: 8.0.x
 
-  build-workflow:
-    runs-on: ubuntu-latest
-    needs: configura-dotnet
-    steps:
-      - uses: actions/checkout@v4
+  # build-workflow:
+  #   runs-on: ubuntu-latest
+  #   needs: configura-dotnet
+  #   steps:
+  #     - uses: actions/checkout@v4
       - name: Builda Webapp
         run: dotnet build ./github4women/github4women.csproj
 
-  roda-workflow:
-    runs-on: ubuntu-latest
-    needs: build-workflow
-    steps:
-      - uses: actions/checkout@v4
+  # roda-workflow:
+  #   runs-on: ubuntu-latest
+  #   needs: build-workflow
+  #   steps:
+  #     - uses: actions/checkout@v4
       - name: Roda Webapp
         run: dotnet run --project ./github4women/github4women.csproj

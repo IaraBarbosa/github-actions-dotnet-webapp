@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Usando .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
 
@@ -33,5 +33,5 @@ jobs:
   #   needs: build-workflow
   #   steps:
   #     - uses: actions/checkout@v4
-      - name: Roda Webapp
-        run: dotnet run --project ./github4women/github4women.csproj
+      # - name: Roda Webapp
+      #   run: dotnet run --project ./github4women/github4women.csproj

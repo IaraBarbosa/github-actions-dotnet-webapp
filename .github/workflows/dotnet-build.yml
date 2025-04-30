@@ -19,9 +19,13 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.
+      - name: Restaurar dependências
+        run: dotnet restore
+
 
   build-workflow:
     runs-on: ubuntu-latest
+    needs: configura-dotenet
     steps:
       - uses: actions/checkout@v4
       - name: Builda Webapp

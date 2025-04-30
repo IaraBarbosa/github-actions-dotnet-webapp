@@ -20,7 +20,7 @@ jobs:
         with:
           dotnet-version: 8.
       - name: Restaurar dependências
-        run: dotnet restore
+        run: dotnet restore **/*.csproj
 
 
   build-workflow:

@@ -11,7 +11,7 @@ on:
 
 jobs:
 
-  configura-dotenet:
+  configura-dotnet:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,9 +19,6 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.
-      - name: Restaurar dependências
-        run: dotnet restore **/*.csproj
-
 
   build-workflow:
     runs-on: ubuntu-latest
@@ -29,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Builda Webapp
-        run: dotnet build **/*.csproj --no-restore
+        run: dotnet build **/*.csproj
 
   roda-workflow:
       runs-on: ubuntu-latest

@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: configura-dotnet
     steps:
-      - uses: actions/checkout@v4
+      # - uses: actions/checkout@v4
       - name: Builda Webapp
         run: dotnet build ./github4women/github4women.csproj
 
@@ -32,6 +32,6 @@ jobs:
       runs-on: ubuntu-latest
       needs: build-workflow
       steps:
-        - uses: actions/checkout@v4
+        # - uses: actions/checkout@v4
         - name: Roda Webapp
           run: dotnet run --project ./github4women/github4women.csproj

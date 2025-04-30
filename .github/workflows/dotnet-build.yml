@@ -22,4 +22,4 @@ jobs:
       needs: build-workflow
       steps:
         - name: Roda Webapp
-            dotnet run --project **/*.csproj
+          run: dotnet run --project **/*.csproj

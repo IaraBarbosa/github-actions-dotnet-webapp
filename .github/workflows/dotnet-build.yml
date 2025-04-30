@@ -33,4 +33,4 @@ jobs:
       needs: build-workflow
       steps:
         - name: Roda Webapp
-          run: dotnet run --project github4women/github4women.csproj
+          run: dotnet run --project ./github4women/github4women.csproj
